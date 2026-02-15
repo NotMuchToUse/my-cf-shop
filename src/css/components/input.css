@@ -1,0 +1,76 @@
+@import url(../base.css);
+
+.input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: 2.25rem;
+  padding: 0.25rem 0.75rem;
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--input);
+  border-radius: calc(var(--radius) - 2px);
+  background-color: transparent;
+
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--foreground);
+
+  box-shadow: var(--shadow-xs);
+  outline: none;
+
+  transition-property: color, box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+@media (min-width: 768px) {
+  .input {
+    font-size: 0.875rem;
+  }
+}
+
+.input::placeholder {
+  color: var(--muted-foreground);
+}
+
+.input::selection {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.input::file-selector-button {
+  display: inline-flex;
+  height: 1.75rem;
+  border: 0;
+  background-color: transparent;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--foreground);
+  margin-right: 0.75rem;
+}
+
+.input:focus-visible {
+  border-color: var(--ring);
+  box-shadow: 0 0 0 3px oklch(from var(--ring) l c h / 0.5);
+}
+
+.input:disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.input[aria-invalid="true"] {
+  border-color: var(--destructive);
+  box-shadow: 0 0 0 3px oklch(from var(--destructive) l c h / 0.2);
+}
+
+.dark .input {
+  background-color: oklch(from var(--input) l c h / 0.3);
+}
+
+.dark .input[aria-invalid="true"] {
+  box-shadow: 0 0 0 3px oklch(from var(--destructive) l c h / 0.4);
+}

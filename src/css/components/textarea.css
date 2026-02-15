@@ -1,0 +1,71 @@
+@import url(../base.css);
+
+.textarea {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  min-height: 80px;
+  padding: 0.5rem 0.75rem;
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--input);
+  border-radius: calc(var(--radius) - 2px);
+  background-color: transparent;
+
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--foreground);
+
+  box-shadow: var(--shadow-xs);
+  outline: none;
+  resize: vertical;
+
+  transition-property: color, box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Đồng bộ Font size Responsive với Input */
+@media (min-width: 768px) {
+  .textarea {
+    font-size: 0.875rem;
+  }
+}
+
+.textarea::placeholder {
+  color: var(--muted-foreground);
+}
+
+/* Thêm selection cho đồng bộ */
+.textarea::selection {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.textarea:focus-visible {
+  border-color: var(--ring);
+  /* Đồng bộ shadow focus style */
+  box-shadow: 0 0 0 3px oklch(from var(--ring) l c h / 0.5);
+}
+
+.textarea:disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.textarea[aria-invalid="true"] {
+  border-color: var(--destructive);
+  /* Đồng bộ shadow error style */
+  box-shadow: 0 0 0 3px oklch(from var(--destructive) l c h / 0.2);
+}
+
+/* Thêm Dark Mode cho đồng bộ */
+.dark .textarea {
+  background-color: oklch(from var(--input) l c h / 0.3);
+}
+
+.dark .textarea[aria-invalid="true"] {
+  box-shadow: 0 0 0 3px oklch(from var(--destructive) l c h / 0.4);
+}

@@ -1,0 +1,112 @@
+@import url(../base.css);
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.field-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--foreground);
+  user-select: none;
+  text-align: left;
+}
+
+.field:has(:disabled) .field-label {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.field-input {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  border-radius: calc(var(--radius) - 2px);
+  border: 1px solid var(--input);
+  background-color: transparent;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--foreground);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  outline: none;
+  transition-property: border-color, box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+input.field-input {
+  height: 2.25rem;
+  padding: 0.25rem 0.75rem;
+}
+
+.field-textarea {
+  min-height: 80px;
+  padding: 0.5rem 0.75rem;
+  resize: vertical;
+}
+
+.field-input::placeholder {
+  color: var(--muted-foreground);
+}
+
+.field-input::selection {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.field-input:focus-visible {
+  border-color: var(--ring);
+  box-shadow: 0 0 0 3px oklch(from var(--ring) l c h / 0.5);
+}
+
+.field-input:disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.field-input[aria-invalid="true"] {
+  border-color: var(--destructive);
+  box-shadow: 0 0 0 3px oklch(from var(--destructive) l c h / 0.2);
+}
+
+.field-input[type="file"] {
+  border: 0;
+  background-color: transparent;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0;
+  height: 2.25rem;
+  line-height: 2.25rem;
+}
+
+.field-input[type="file"]::file-selector-button {
+  display: inline-flex;
+  height: 100%;
+  border: 0;
+  background-color: transparent;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--foreground);
+  margin-right: 0.75rem;
+  padding: 0;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .field-input {
+    font-size: 0.875rem;
+  }
+}
+
+.dark .field-input {
+  background-color: oklch(from var(--input) l c h / 0.3);
+}
+
+.dark .field-input[aria-invalid="true"] {
+  box-shadow: 0 0 0 3px oklch(from var(--destructive) l c h / 0.4);
+}

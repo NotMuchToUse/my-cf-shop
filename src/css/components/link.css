@@ -1,0 +1,29 @@
+@import url(../base.css);
+
+/* ======================= BASE STYLING ======================= */
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  padding-bottom: 3px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: calc(3px - 1.5px);
+  background-color: #6f4e37;
+  transition: width 0.3s ease-out;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+/* ======================= COMPONENT CUSTOM ======================= */

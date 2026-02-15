@@ -1,0 +1,164 @@
+@import url(../base.css);
+
+.contact-page-wrapper {
+  padding: 120px 0 80px; /* Tăng padding top để hở Navbar */
+  background-color: var(--background);
+  min-height: 100vh;
+}
+
+/* Layout Grid chính */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 30px;
+  margin-bottom: 50px; /* Khoảng cách với Map phía dưới */
+}
+
+/* --- Cột Trái: Info Card --- */
+.contact-info-card {
+  background-color: var(--secondary);
+  padding: 40px;
+  border-radius: var(--radius);
+  color: var(--secondary-foreground);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-info-card h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: var(--primary);
+  line-height: 1.1;
+}
+
+.contact-intro {
+  margin-bottom: 40px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.info-item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.info-icon {
+  width: 50px;
+  height: 50px;
+  background: var(--background);
+  color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-2xs);
+}
+
+.info-text h4 {
+  margin: 0;
+  font-weight: 700;
+  color: var(--foreground);
+}
+.info-text p {
+  margin: 4px 0 0;
+  font-size: 0.95rem;
+  color: var(--muted-foreground);
+}
+
+/* --- Cột Phải: Form Container --- */
+.contact-form-container {
+  background: var(--card);
+  padding: 40px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.contact-form-custom {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Khoảng cách giữa các hàng Field */
+}
+
+/* Ép chết kích thước Field */
+.contact-form-custom .field {
+  width: 100% !important;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-form-custom input,
+.contact-form-custom textarea {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important; /* QUAN TRỌNG NHẤT */
+  padding: 14px 16px !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+  font-family: var(--font-sans) !important;
+}
+
+/* Row cho Họ tên & Email */
+.contact-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+}
+
+.form-actions {
+  margin-top: 10px;
+}
+
+/* --- Section Bản đồ --- */
+.map-section {
+  width: 100%;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+}
+
+#map {
+  width: 100% !important;
+  height: 500px !important; /* Ép chiều cao cố định */
+  z-index: 1;
+}
+
+/* Fix Leaflet tiles */
+.leaflet-container {
+  background: var(--muted) !important;
+}
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .contact-form-container,
+  .contact-info-card {
+    padding: 25px;
+  }
+
+  .contact-info-card h2 {
+    font-size: 2rem;
+  }
+  #map {
+    height: 350px !important;
+  }
+}
