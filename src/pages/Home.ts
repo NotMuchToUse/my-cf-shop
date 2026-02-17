@@ -22,9 +22,11 @@ import {
 
 const HomePage: PageRender = {
   render: async () => {
+    const navbarHTML = await NavbarSection();
+
     return /*html*/ `
       <!-- Navbar -->
-        ${NavbarSection()}
+        ${navbarHTML}
 
       <!-- Hero section -->
         ${HeroSection()}

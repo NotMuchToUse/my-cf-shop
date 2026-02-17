@@ -1,86 +1,401 @@
 @import url(../base.css);
 
-.navbar {
+/* =========================================
+   1. COMMON (Dùng chung cho Header)
+   ========================================= */
+.app-header {
   position: sticky;
   top: 0;
-  z-index: 50;
+  z-index: 1000; /* Luôn trên cùng của trang web */
   width: 100%;
-  border-bottom: 1px solid var(--border);
   background-color: oklch(from var(--background) l c h / 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
 }
 
-.navbar-container {
+.navbar-content-flex {
   display: flex;
-  height: 3.5rem;
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
-}
-
-.nav-item {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.nav-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: calc(var(--radius) - 2px);
-  font-size: 0.875rem;
-  font-weight: 500;
-  line-height: 1.5;
-  height: 2.25rem;
+  height: 100%;
   padding: 0 1rem;
-  color: var(--foreground);
+}
+
+.logo-text {
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--primary);
   text-decoration: none;
-  background-color: transparent;
-  transition-property: color, background-color;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+  white-space: nowrap;
 }
 
-.nav-link:hover,
-.nav-link:focus-visible {
-  background-color: var(--accent);
-  color: var(--accent-foreground);
-  outline: none;
-}
-
-.nav-button {
-  display: inline-flex;
+/* Base Icon Button Style */
+.nav-icon-btn {
+  position: relative;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: var(--foreground);
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  white-space: nowrap;
-  border-radius: calc(var(--radius) - 2px);
-  font-size: 0.875rem;
-  font-weight: 500;
-  height: 2.25rem;
-  padding: 0 1rem;
-  background-color: var(--primary);
-  color: var(--primary-foreground);
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  transition-property: background-color, opacity;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+  border-radius: var(--radius);
+  transition: background-color 0.2s;
 }
 
-.nav-button:hover {
-  opacity: 0.9;
+.nav-icon-btn:hover {
+  background-color: var(--secondary);
 }
 
-.nav-button:focus-visible {
-  outline: none;
-  box-shadow:
-    0 0 0 2px var(--ring),
-    0 0 0 4px var(--background);
+.cart-badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: var(--destructive);
+  color: white;
+  font-size: 0.7rem;
+  padding: 1px 5px;
+  border-radius: 99px;
+  font-weight: bold;
+  border: 2px solid var(--background);
 }
 
-.nav-user-wrapper {
-  cursor: pointer;
+/* =========================================
+   2. DESKTOP ONLY (Min-width: 993px)
+   ========================================= */
+@media (min-width: 993px) {
+  .navbar-mobile {
+    display: none;
+  }
+
+  .navbar-desktop {
+    height: 70px;
+    display: block;
+  }
+
+  .desktop-links {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: var(--foreground);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+  }
+
+  .nav-link:hover {
+    color: var(--primary);
+  }
+
+  .desktop-auth-wrapper,
+  .desktop-guest-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .nav-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+    object-fit: cover;
+  }
+
+  .btn-login-desktop {
+    background: var(--primary);
+    color: var(--primary-foreground);
+    border: none;
+    padding: 8px 20px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
+
+/* =========================================
+   3. MOBILE ONLY (Max-width: 992px)
+   ========================================= */
+@media (max-width: 992px) {
+  .navbar-desktop {
+    display: none;
+  }
+
+  .navbar-mobile {
+    height: 60px;
+    display: block;
+  }
+
+  .mobile-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .hamburger-btn {
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    color: var(--foreground);
+    padding: 8px;
+    cursor: pointer;
+  }
+
+  /* --- DRAWER (Menu trượt) --- */
+  .mobile-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    height: 100vh;
+    @import url(../base.css);
+
+    /* --- HEADER & BAR --- */
+    .app-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: var(--background);
+      border-bottom: 1px solid var(--border);
+      width: 100%;
+      height: 64px;
+    }
+
+    .nav-flex-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+    }
+
+    /* --- MOBILE DRAWER (Mount logic) --- */
+    .mobile-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 300px;
+      max-width: 80vw;
+      background-color: var(--background);
+      z-index: 10001;
+      display: flex;
+      flex-direction: column;
+      box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
+      border-left: 1px solid var(--border);
+
+      /* Animation khởi tạo */
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .mobile-drawer.open {
+      transform: translateX(0);
+    }
+
+    .mobile-overlay {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0);
+      z-index: 10000;
+      transition: background-color 0.3s ease;
+    }
+
+    .mobile-overlay.open {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    /* --- DESKTOP/MOBILE HIDING --- */
+    @media (min-width: 993px) {
+      .navbar-mobile {
+        display: none;
+      }
+      .navbar-desktop {
+        display: block;
+        height: 100%;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .navbar-desktop {
+        display: none;
+      }
+      .navbar-mobile {
+        display: block;
+        height: 100%;
+      }
+    }
+
+    /* Cấu trúc bên trong drawer giống như thiết kế bạn muốn */
+    .drawer-user-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 20px;
+    }
+    .drawer-avatar {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+    }
+    .drawer-theme-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      border-top: 1px solid var(--border);
+    }
+    max-width: 85vw;
+    background-color: var(--background);
+    z-index: 10001;
+
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid var(--border);
+  }
+
+  .mobile-drawer.open {
+    transform: translateX(0); /* Trượt vào màn hình */
+  }
+
+  .drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .drawer-title {
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--primary);
+  }
+
+  .close-drawer-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--muted-foreground);
+  }
+
+  .drawer-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+
+  .drawer-body .nav-link {
+    font-size: 1.1rem;
+    color: var(--foreground);
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: var(--radius);
+    background: var(--secondary);
+  }
+
+  /* Footer của Drawer (Profile & Theme) */
+  .mobile-drawer-profile,
+  .mobile-drawer-guest {
+    padding: 1.5rem;
+    background-color: var(--secondary);
+    border-top: 1px solid var(--border);
+  }
+
+  .drawer-user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1.5rem;
+  }
+
+  .drawer-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--primary);
+  }
+  .drawer-name {
+    font-weight: 700;
+    margin: 0;
+    color: var(--foreground);
+  }
+  .drawer-email {
+    font-size: 0.85rem;
+    color: var(--muted-foreground);
+    margin: 0;
+  }
+
+  .drawer-theme-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+    font-weight: 600;
+  }
+
+  .btn-logout-mobile,
+  .btn-login-mobile {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: var(--radius);
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .btn-logout-mobile {
+    background: var(--destructive);
+    color: var(--destructive-foreground);
+  }
+  .btn-login-mobile {
+    background: var(--primary);
+    color: var(--primary-foreground);
+  }
+
+  /* --- OVERLAY --- */
+  .mobile-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+
+    /* Ẩn mặc định */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+  }
+
+  .mobile-overlay.open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* =========================================
+   4. FIX MODAL CONFLICTS (Tối ưu hóa)
+   ========================================= */
+/* Khi modal (Auth/Profile) mở, đảm bảo nó nằm trên cả Drawer */
+.swal2-container {
+  z-index: 20000 !important;
+}
+
+/* Nếu body đang mở modal, ẩn bớt các thành phần gây rối trên mobile */
+body.swal2-shown .mobile-drawer.open {
+  filter: blur(2px);
+  pointer-events: none;
 }

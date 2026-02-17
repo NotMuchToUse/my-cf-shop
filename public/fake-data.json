@@ -178,5 +178,914 @@
     "image": "https://images.unsplash.com/photo-1616541823729-00fe0aacd32c?q=80&w=600&auto=format&fit=crop",
     "rating": 4.7,
     "description": "Màu đỏ nhung quyến rũ với lớp kem phô mai béo ngậy."
+  },
+  {
+    "id": "CF09",
+    "name": "Cà Phê Đen Nóng",
+    "category": "coffee",
+    "price": 27000,
+    "image": "https://images.unsplash.com/photo-1559056169-6d07f57bdbfd?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.4,
+    "description": "Cà phê đen toàn chất lượng cao, ấm nóng, tỉnh táo."
+  },
+  {
+    "id": "CF10",
+    "name": "Cà Phê Sữa Condensed",
+    "category": "coffee",
+    "price": 33000,
+    "image": "https://images.unsplash.com/photo-1515978519245-336428b57bbb?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.6,
+    "description": "Sữa đặc sinh liệu hòa quyện cùng cà phê Robusta đậm."
+  },
+  {
+    "id": "CF11",
+    "name": "Cà Phê Mocha",
+    "category": "coffee",
+    "price": 38000,
+    "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.5,
+    "description": "Hỗn hợp hoàn hảo giữa cà phê, sôcôla và sữa êm ái."
+  },
+  {
+    "id": "CF12",
+    "name": "Cà Phê Caramel",
+    "category": "coffee",
+    "price": 36000,
+    "image": "https://images.unsplash.com/photo-1501339847302-ac426a36c5e2?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.7,
+    "description": "Cà phê với nước caramel ngọt ngào, hấp dẫn lắm."
+  },
+  {
+    "id": "CF13",
+    "name": "Cà Phê Vanilla",
+    "category": "coffee",
+    "price": 35000,
+    "image": "https://images.unsplash.com/photo-1469022563149-aa64dbd37daa?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.4,
+    "description": "Hương vani nhẹ nhàng kết hợp với cà phê đắng."
+  },
+  {
+    "id": "CF14",
+    "name": "Cà Phê Macadamia",
+    "category": "coffee",
+    "price": 40000,
+    "image": "https://images.unsplash.com/photo-1514432324607-2e467f4af445?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.8,
+    "description": "Cà phê với hương ướp macadamia thơm ngon đến tê."
+  },
+  {
+    "id": "CF15",
+    "name": "Cà Phê Dừa",
+    "category": "coffee",
+    "price": 37000,
+    "image": "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.5,
+    "description": "Hương dừa tươi mát hòa cùng cà phê nóng hỏi hẫn."
+  },
+  {
+    "id": "CF16",
+    "name": "Cà Phê Bạc Hà Nóng",
+    "category": "coffee",
+    "price": 32000,
+    "image": "https://images.unsplash.com/photo-1506859223367-574c5cc96eba?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.3,
+    "description": "Cà phê nóng với mùi bạc hà mát lạnh, tươi sảng."
+  },
+  {
+    "id": "CF17",
+    "name": "Cà Phê Gừng",
+    "category": "coffee",
+    "price": 34000,
+    "image": "https://images.unsplash.com/photo-1442512595331-e89e6fee58c9?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.2,
+    "description": "Cà phê ấm cơ thể với nước gừng tươi, ngài tê liệt."
+  },
+  {
+    "id": "machine09",
+    "name": "Macchiato",
+    "category": "machine",
+    "price": 42000,
+    "image": "https://images.unsplash.com/photo-1514432324607-2e467f4af445?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.6,
+    "description": "Espresso với một chút bọt sữa, cân bằng hoàn hảo."
+  },
+  {
+    "id": "machine10",
+    "name": "Flat White",
+    "category": "machine",
+    "price": 46000,
+    "image": "https://images.unsplash.com/photo-1495521821757-a1efb6729352?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.7,
+    "description": "Cà phê Úc với lớp milk foam mỏng, mịn màng."
+  },
+  {
+    "id": "machine11",
+    "name": "Cortado",
+    "category": "machine",
+    "price": 40000,
+    "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.4,
+    "description": "Kết hợp ngang bằng giữa espresso và sữa nóng."
+  },
+  {
+    "id": "machine12",
+    "name": "Affogato",
+    "category": "machine",
+    "price": 44000,
+    "image": "https://images.unsplash.com/photo-1534432714694-73dc468b41cc?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.8,
+    "description": "Kem vanila với espresso nóng đổ qua, thú vị cực."
+  },
+  {
+    "id": "machine13",
+    "name": "Vienna Coffee",
+    "category": "machine",
+    "price": 48000,
+    "image": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.5,
+    "description": "Cà phê Vienna với kem tươi, xa hoa lắm."
+  },
+  {
+    "id": "machine14",
+    "name": "Long Black",
+    "category": "machine",
+    "price": 38000,
+    "image": "https://images.unsplash.com/photo-1539432519214-e8727e3e01aa?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.3,
+    "description": "Nước nóng với hai shot espresso, đắng và mạnh."
+  },
+  {
+    "id": "machine15",
+    "name": "Ristretto",
+    "category": "machine",
+    "price": 33000,
+    "image": "https://images.unsplash.com/photo-1493857671505-72967e2e2760?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.2,
+    "description": "Espresso đậc lắm, ít nước, vị mạnh tỉnh táo."
+  },
+  {
+    "id": "TE05",
+    "name": "Trà Sữa Tươi",
+    "category": "tea",
+    "price": 45000,
+    "image": "https://images.unsplash.com/photo-1597318120722-82b78e65f6da?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.8,
+    "description": "Trà đen ôn hòa cùng sữa tươi béo, không hề khô cạn."
+  },
+  {
+    "id": "TE06",
+    "name": "Trà Gạo",
+    "category": "tea",
+    "price": 39000,
+    "image": "https://images.unsplash.com/photo-1597837212624-053f76b0e4b7?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.5,
+    "description": "Trà gạo thơm bùi, thanh mát, đặc sắc Việt Nam."
+  },
+  {
+    "id": "TE07",
+    "name": "Trà Dâu Tây",
+    "category": "tea",
+    "price": 42000,
+    "image": "https://images.unsplash.com/photo-1597318120722-82b78e65f6da?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.6,
+    "description": "Trà đỏ với dâu tây tươi, chua chua ngon tuyệt."
+  },
+  {
+    "id": "TE08",
+    "name": "Trà Lạnh Medley",
+    "category": "tea",
+    "price": 44000,
+    "image": "https://images.unsplash.com/photo-1597318161266-e02a30c63161?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.7,
+    "description": "Trà hỗn hợp nhiều hương vị, thanh mát, lạnh sảng."
+  },
+  {
+    "id": "TE09",
+    "name": "Trà Tắc",
+    "category": "tea",
+    "price": 41000,
+    "image": "https://images.unsplash.com/photo-1594707352052-08d5a786a5ff?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.4,
+    "description": "Trà mã đề với trái tắc giòn, vị thanh tươi mát."
+  },
+  {
+    "id": "TE10",
+    "name": "Trà Ô Long Sữa",
+    "category": "tea",
+    "price": 48000,
+    "image": "https://images.unsplash.com/photo-1597318161603-b54d9ff4e6e1?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.8,
+    "description": "Trà ô long nóng với sữa, hương thơm quyến rũ."
+  },
+  {
+    "id": "TE11",
+    "name": "Trà Nóng Classic",
+    "category": "tea",
+    "price": 37000,
+    "image": "https://images.unsplash.com/photo-1597318101088-b100e4e1ba80?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.3,
+    "description": "Trà tươi mới pha nóng, hương thơm lan tỏa, thanh mát."
+  },
+  {
+    "id": "TE12",
+    "name": "Trà Sữa Cheese",
+    "category": "tea",
+    "price": 49000,
+    "image": "https://images.unsplash.com/photo-1597316372098-b1dc9338e32a?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.9,
+    "description": "Trà sữa phủ lớp kem phô mai thơm béo, sang chảnh."
+  },
+  {
+    "id": "juice01",
+    "name": "Nước Cam Ép",
+    "category": "juice",
+    "price": 38000,
+    "image": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.6,
+    "description": "Nước cam tươi ép ngay, nguyên chất 100%, sắc cam rực rỡ."
+  },
+  {
+    "id": "juice02",
+    "name": "Nước Dâu Tây",
+    "category": "juice",
+    "price": 42000,
+    "image": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.7,
+    "description": "Nước dâu tây tươi ngon, chua nhẹ, ngọt tự nhiên."
+  },
+  {
+    "id": "juice03",
+    "name": "Nước Dứa",
+    "category": "juice",
+    "price": 36000,
+    "image": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.4,
+    "description": "Nước dứa tươi mát, vị ngọt tự nhiên, giải nhiệt cực."
+  },
+  {
+    "id": "juice04",
+    "name": "Nước Táo",
+    "category": "juice",
+    "price": 39000,
+    "image": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.5,
+    "description": "Nước táo tươi, sắc đỏ rượu rỡ, ngọt-chua cân bằng."
+  },
+  {
+    "id": "juice05",
+    "name": "Nước Chuối",
+    "category": "juice",
+    "price": 35000,
+    "image": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.3,
+    "description": "Nước chuối mịn, béo, cung cấp năng lượng tốt."
+  },
+  {
+    "id": "juice06",
+    "name": "Nước Cà Rốt",
+    "category": "juice",
+    "price": 37000,
+    "image": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.2,
+    "description": "Nước cà rốt tươi, màu cam sáng, tốt cho sức khỏe."
+  },
+  {
+    "id": "juice07",
+    "name": "Nước Lôn Nho",
+    "category": "juice",
+    "price": 41000,
+    "image": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.6,
+    "description": "Nước nho tươi tím đậm, ngọt dịu, thanh mát cực."
+  },
+  {
+    "id": "juice08",
+    "name": "Nước Lựu",
+    "category": "juice",
+    "price": 43000,
+    "image": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.8,
+    "description": "Nước lựu tươi, kích thích vị giác, chứa nhiều chất dinh dưỡng."
+  },
+  {
+    "id": "FZ05",
+    "name": "Strawberry Freeze",
+    "category": "freeze",
+    "price": 56000,
+    "image": "https://images.unsplash.com/photo-1553530666-ba2a8e36cd77?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.7,
+    "description": "Đá xay dâu tây tươi, ngọt tự nhiên, mát lạnh."
+  },
+  {
+    "id": "FZ06",
+    "name": "Mango Freeze",
+    "category": "freeze",
+    "price": 55000,
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.6,
+    "description": "Xoài tươi xay mịn, vị ngọt đặc trưng, đá lạnh sảng."
+  },
+  {
+    "id": "FZ07",
+    "name": "Lemon Tea Freeze",
+    "category": "freeze",
+    "price": 52000,
+    "image": "https://images.unsplash.com/photo-1606312519331-379a88e0df60?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.5,
+    "description": "Trà chanh đá xay, chua nhẹ, ngọt thanh, tỉnh táo."
+  },
+  {
+    "id": "FZ08",
+    "name": "Pistachio Freeze",
+    "category": "freeze",
+    "price": 60000,
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.8,
+    "description": "Hạt dẻ cười xay nhuyễn, vị hạt tinh tế, xa hoa."
+  },
+  {
+    "id": "FZ09",
+    "name": "Pandan Freeze",
+    "category": "freeze",
+    "price": 54000,
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.4,
+    "description": "Lá dứa xay mịn, hương thơm lạ, màu xanh neon."
+  },
+  {
+    "id": "FZ10",
+    "name": "Vanilla Mocha Freeze",
+    "category": "freeze",
+    "price": 57000,
+    "image": "https://images.unsplash.com/photo-1553530666-ba2a8e36cd77?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.7,
+    "description": "Vani, cà phê, sôcôla đá xay, thơm lừng, ngon tuyệt."
+  },
+  {
+    "id": "FZ11",
+    "name": "Taro Freeze",
+    "category": "freeze",
+    "price": 53000,
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.5,
+    "description": "Khoai tím xay nhuyễn, vị bùi, thanh mát, độc đáo."
+  },
+  {
+    "id": "FZ12",
+    "name": "Avocado Smoothie Freeze",
+    "category": "freeze",
+    "price": 58000,
+    "image": "https://images.unsplash.com/photo-1553530666-ba2a8e36cd77?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.6,
+    "description": "Bơ xay mịn, béo ngậy, thanh mát, bổ dưỡng cao."
+  },
+  {
+    "id": "CK05",
+    "name": "Cheesecake",
+    "category": "cake",
+    "price": 48000,
+    "image": "https://images.unsplash.com/photo-1567327613485-f386e19beead?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.8,
+    "description": "Bánh phô mai New York, béo ngậy, tan chảy trong miệng."
+  },
+  {
+    "id": "CK06",
+    "name": "Chocolate Cake",
+    "category": "cake",
+    "price": 45000,
+    "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.7,
+    "description": "Bánh sôcôla ba tầng, đậm đà, mềm mềm thơm lừng."
+  },
+  {
+    "id": "CK07",
+    "name": "Strawberry Shortcake",
+    "category": "cake",
+    "price": 46000,
+    "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.6,
+    "description": "Bánh bông lan, kem tươi, dâu tây tươi ngon lắm."
+  },
+  {
+    "id": "CK08",
+    "name": "Matcha Cake",
+    "category": "cake",
+    "price": 50000,
+    "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.5,
+    "description": "Bánh matcha Nhật Bản, mất lam, hương trà xanh đặc."
+  },
+  {
+    "id": "CK09",
+    "name": "Cookies & Cream",
+    "category": "cake",
+    "price": 44000,
+    "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.4,
+    "description": "Bánh với cookie xay nhuyễn, vị ngọt, giòn rụm."
+  },
+  {
+    "id": "CK10",
+    "name": "Lemon Tart",
+    "category": "cake",
+    "price": 40000,
+    "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.3,
+    "description": "Bánh chanh thơm chua, mặn mặn, tan chảy."
+  },
+  {
+    "id": "CK11",
+    "name": "Mille-Feuille",
+    "category": "cake",
+    "price": 52000,
+    "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.9,
+    "description": "Bánh mille feuille với kem đặc, lớp bánh giòn."
+  },
+  {
+    "id": "CK12",
+    "name": "Fruit Tart",
+    "category": "cake",
+    "price": 48000,
+    "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.6,
+    "description": "Bánh với trái cây tươi, cơm cua tốt, bắt mắt."
+  },
+  {
+    "id": "CF18",
+    "name": "Cà Phê Cầu Đen",
+    "category": "coffee",
+    "price": 30000,
+    "image": "https://images.unsplash.com/photo-1559056169-6d07f57bdbfd?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.3,
+    "description": "Cà phê truyền thống, phin cầu đen, vị đấm đà."
+  },
+  {
+    "id": "CF19",
+    "name": "Cà Phê Cầu Sữa",
+    "category": "coffee",
+    "price": 33000,
+    "image": "https://images.unsplash.com/photo-1515978519245-336428b57bbb?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.5,
+    "description": "Cà phê phin cầu với sữa đặc, béo ngậy cao."
+  },
+  {
+    "id": "CF20",
+    "name": "Cà Phê Thạch",
+    "category": "coffee",
+    "price": 28000,
+    "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.2,
+    "description": "Cà phê đen lạnh với thạch đen, dai giòn, thú vị."
+  },
+  {
+    "id": "CF21",
+    "name": "Cà Phê Đá Xay",
+    "category": "coffee",
+    "price": 34000,
+    "image": "https://images.unsplash.com/photo-1501339847302-ac426a36c5e2?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.6,
+    "description": "Cà phê đá xay, mát lạnh, tỉnh táo cực nhanh."
+  },
+  {
+    "id": "CF22",
+    "name": "Cà Phê Ghi Ơ",
+    "category": "coffee",
+    "price": 36000,
+    "image": "https://images.unsplash.com/photo-1469022563149-aa64dbd37daa?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.4,
+    "description": "Cà phê với bơ ghee, béo ngậy, ấm nóng, bổ dưỡng."
+  },
+  {
+    "id": "CF23",
+    "name": "Cà Phê Hạt Tiêu",
+    "category": "coffee",
+    "price": 35000,
+    "image": "https://images.unsplash.com/photo-1514432324607-2e467f4af445?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.3,
+    "description": "Cà phê với mùi tiêu, cay nồn, kích thích vị giác."
+  },
+  {
+    "id": "CF24",
+    "name": "Cà Phê Bã Hạt",
+    "category": "coffee",
+    "price": 38000,
+    "image": "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.5,
+    "description": "Cà phê nguyên chất với bã hạt, vị đậm, lâu tan."
+  },
+  {
+    "id": "machine16",
+    "name": "Espresso Double Shot",
+    "category": "machine",
+    "price": 35000,
+    "image": "https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.5,
+    "description": "Hai shot espresso, tỉnh táo cực, vị đắng sâu."
+  },
+  {
+    "id": "machine17",
+    "name": "Lungo",
+    "category": "machine",
+    "price": 37000,
+    "image": "https://images.unsplash.com/photo-1551030173-122aabc4489c?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.2,
+    "description": "Espresso pha dài hơn, ít đắng, vị nhẹ hơn."
+  },
+  {
+    "id": "machine18",
+    "name": "Mochaccino",
+    "category": "machine",
+    "price": 47000,
+    "image": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.8,
+    "description": "Mocha với cappuccino, sôcôla và sữa, ngon cực."
+  },
+  {
+    "id": "machine19",
+    "name": "Irish Coffee",
+    "category": "machine",
+    "price": 52000,
+    "image": "https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.7,
+    "description": "Cà phê Ireland với rượu whiskey, kem tươi."
+  },
+  {
+    "id": "machine20",
+    "name": "Cafe Noisette",
+    "category": "machine",
+    "price": 41000,
+    "image": "https://images.unsplash.com/photo-1495521821757-a1efb6729352?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.4,
+    "description": "Espresso với một chút sữa, như hạt dẻ cười."
+  },
+  {
+    "id": "TE13",
+    "name": "Trà Bưởi Vàng",
+    "category": "tea",
+    "price": 46000,
+    "image": "https://images.unsplash.com/photo-1597318160266-e02a30c63161?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.6,
+    "description": "Trà bưởi vàng thanh mát, vị chua ngọt cân bằng."
+  },
+  {
+    "id": "TE14",
+    "name": "Trà Bạc Hà Đá",
+    "category": "tea",
+    "price": 43000,
+    "image": "https://images.unsplash.com/photo-1597318101088-b100e4e1ba80?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.5,
+    "description": "Trà bạc hà lạnh, mát sảng, khám phá vị tươi."
+  },
+  {
+    "id": "TE15",
+    "name": "Trà Sư Tử",
+    "category": "tea",
+    "price": 47000,
+    "image": "https://images.unsplash.com/photo-1594707352052-08d5a786a5ff?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.7,
+    "description": "Trà sư tử đắng, chua, ngọt, đầy tính cách."
+  },
+  {
+    "id": "TE16",
+    "name": "Trà Ổi",
+    "category": "tea",
+    "price": 40000,
+    "image": "https://images.unsplash.com/photo-1597317161603-b54d9ff4e6e1?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.3,
+    "description": "Trà ổi tươi mát, vị nhẹ nhàng, tốt tiêu hóa."
+  },
+  {
+    "id": "TE17",
+    "name": "Trà Dâu Cam",
+    "category": "tea",
+    "price": 44000,
+    "image": "https://images.unsplash.com/photo-1597318101088-b100e4e1ba80?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.6,
+    "description": "Trà dâu cam lạnh, chua ngon, tỉnh diều."
+  },
+  {
+    "id": "TE18",
+    "name": "Trà Xoài",
+    "category": "tea",
+    "price": 45000,
+    "image": "https://images.unsplash.com/photo-1594707352052-08d5a786a5ff?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.4,
+    "description": "Trà xoài ngọt, hương thơm ngon, tươi mát."
+  },
+  {
+    "id": "juice09",
+    "name": "Nước Lựu Đỏ",
+    "category": "juice",
+    "price": 44000,
+    "image": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.7,
+    "description": "Nước lựu đỏ tươi, chứa antioxidant, tốt sức khỏe."
+  },
+  {
+    "id": "juice10",
+    "name": "Nước Cà Phê Đậu Nành",
+    "category": "juice",
+    "price": 35000,
+    "image": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.2,
+    "description": "Nước cà phê đậu nành, bổ dưỡng, đặc sắc."
+  },
+  {
+    "id": "juice11",
+    "name": "Nước Kiwi",
+    "category": "juice",
+    "price": 40000,
+    "image": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.5,
+    "description": "Nước kiwi tươi xanh, chua nhẹ, bổ dưỡng."
+  },
+  {
+    "id": "juice12",
+    "name": "Nước Thanh Đào",
+    "category": "juice",
+    "price": 42000,
+    "image": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.6,
+    "description": "Nước thanh đào tươi, ngọt nhẹ, hương nhang."
+  },
+  {
+    "id": "FZ13",
+    "name": "Blueberry Freeze",
+    "category": "freeze",
+    "price": 54000,
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.5,
+    "description": "Việt quất xay mịn, màu xanh tím, vị tự nhiên."
+  },
+  {
+    "id": "FZ14",
+    "name": "Mint Chocolate Freeze",
+    "category": "freeze",
+    "price": 56000,
+    "image": "https://images.unsplash.com/photo-1553530666-ba2a8e36cd77?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.7,
+    "description": "Bạc hà sôcôla đá xay, mát lạnh, hương ngon."
+  },
+  {
+    "id": "FZ15",
+    "name": "Peach Freeze",
+    "category": "freeze",
+    "price": 55000,
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.6,
+    "description": "Đào đá xay, vị ngọt, hương thơm tinh tế."
+  },
+  {
+    "id": "FZ16",
+    "name": "Durian Freeze",
+    "category": "freeze",
+    "price": 62000,
+    "image": "https://images.unsplash.com/photo-1553530666-ba2a8e36cd77?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.4,
+    "description": "Sầu riêng đá xay, béo ngậy, vị đặc trưng."
+  },
+  {
+    "id": "CK13",
+    "name": "Opera Cake",
+    "category": "cake",
+    "price": 51000,
+    "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.8,
+    "description": "Bánh cà phê sôcôla nhập khẩu, cao cấp, lộng lẫy."
+  },
+  {
+    "id": "CK14",
+    "name": "Pistachio Cake",
+    "category": "cake",
+    "price": 50000,
+    "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.7,
+    "description": "Bánh hạt dẻ cười, lớp kem tinh tế, sang chảnh."
+  },
+  {
+    "id": "CK15",
+    "name": "Panna Cotta",
+    "category": "cake",
+    "price": 46000,
+    "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.5,
+    "description": "Bánh kem Italia, mềm mịn, tan chảy, nhẹ nhàng."
+  },
+  {
+    "id": "CK16",
+    "name": "Macarons",
+    "category": "cake",
+    "price": 49000,
+    "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.6,
+    "description": "Bánh macaron Pháp, đủ vị, vỏ giòn, lòng mềm."
+  },
+  {
+    "id": "CK17",
+    "name": "Brownie",
+    "category": "cake",
+    "price": 35000,
+    "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.4,
+    "description": "Bánh sôcôla brownie, dẻo, đắng, ngon cực."
+  },
+  {
+    "id": "CF25",
+    "name": "Cà Phê Sữa Nóng Thơm",
+    "category": "coffee",
+    "price": 34000,
+    "image": "https://images.unsplash.com/photo-1559056169-6d07f57bdbfd?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.5,
+    "description": "Cà phê sữa nóng, hương thơm lan tỏa, ấm cơ thể."
+  },
+  {
+    "id": "CF26",
+    "name": "Cà Phê Bơ Đen",
+    "category": "coffee",
+    "price": 37000,
+    "image": "https://images.unsplash.com/photo-1515978519245-336428b57bbb?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.6,
+    "description": "Cà phê với bơ, mềm, béo, tỉnh táo, bổ dưỡng."
+  },
+  {
+    "id": "CF27",
+    "name": "Cà Phê Cạo",
+    "category": "coffee",
+    "price": 29000,
+    "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.2,
+    "description": "Cà phê phin đen cào, vị đậm, hương đặc sắc."
+  },
+  {
+    "id": "CF28",
+    "name": "Cà Phê Cam",
+    "category": "coffee",
+    "price": 35000,
+    "image": "https://images.unsplash.com/photo-1501339847302-ac426a36c5e2?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.4,
+    "description": "Cà phê với cam tươi, chua nhẹ, ngón tuyệt."
+  },
+  {
+    "id": "CF29",
+    "name": "Cà Phê Quế",
+    "category": "coffee",
+    "price": 34000,
+    "image": "https://images.unsplash.com/photo-1469022563149-aa64dbd37daa?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.3,
+    "description": "Cà phê với quế, hương ấm, dễ tiêu, tốt sức khỏe."
+  },
+  {
+    "id": "CF30",
+    "name": "Cà Phê Cardamom",
+    "category": "coffee",
+    "price": 36000,
+    "image": "https://images.unsplash.com/photo-1514432324607-2e467f4af445?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.5,
+    "description": "Cà phê hạt nhục đậu khấu, hương thơm tinh tế."
+  },
+  {
+    "id": "machine21",
+    "name": "Breve",
+    "category": "machine",
+    "price": 48000,
+    "image": "https://images.unsplash.com/photo-1506859223367-574c5cc96eba?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.6,
+    "description": "Espresso với kem đặc, vị béo, hương sâu."
+  },
+  {
+    "id": "machine22",
+    "name": "Café Bombón",
+    "category": "machine",
+    "price": 44000,
+    "image": "https://images.unsplash.com/photo-1442512595331-e89e6fee58c9?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.7,
+    "description": "Espresso với sữa đặc, lớp rõ rệt, đẹp mắt."
+  },
+  {
+    "id": "machine23",
+    "name": "Gibraltar",
+    "category": "machine",
+    "price": 43000,
+    "image": "https://images.unsplash.com/photo-1514432324607-2e467f4af445?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.5,
+    "description": "Café latte nước nóng, tỷ lệ vàng, cân bằng."
+  },
+  {
+    "id": "machine24",
+    "name": "Red Eye",
+    "category": "machine",
+    "price": 40000,
+    "image": "https://images.unsplash.com/photo-1495521821757-a1efb6729352?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.3,
+    "description": "Nước sôi cộng espresso, siêu tỉnh táo, mạnh."
+  },
+  {
+    "id": "TE19",
+    "name": "Trà Cúc Mật Ong",
+    "category": "tea",
+    "price": 45000,
+    "image": "https://images.unsplash.com/photo-1597318160266-e02a30c63161?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.7,
+    "description": "Trà cúc tươi, thêm mật ong, ấm, soothe."
+  },
+  {
+    "id": "TE20",
+    "name": "Trà Quế Gừng",
+    "category": "tea",
+    "price": 43000,
+    "image": "https://images.unsplash.com/photo-1597318101088-b100e4e1ba80?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.4,
+    "description": "Trà quế gừng, ấm cơ thể, tốt sức khỏe."
+  },
+  {
+    "id": "juice13",
+    "name": "Nước Bước Thăng",
+    "category": "juice",
+    "price": 39000,
+    "image": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.5,
+    "description": "Nước cà chua, ngọn rau dâm bụt, bổ dưỡng."
+  },
+  {
+    "id": "juice14",
+    "name": "Nước Rau Cần",
+    "category": "juice",
+    "price": 37000,
+    "image": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.3,
+    "description": "Nước rau tươi, detox cơ thể, tốt sức khỏe."
+  },
+  {
+    "id": "juice15",
+    "name": "Nước Trái Chanh Việt",
+    "category": "juice",
+    "price": 38000,
+    "image": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.4,
+    "description": "Nước chanh ta tươi, chua đẵm, tỉnh táo."
+  },
+  {
+    "id": "FZ17",
+    "name": "Lychee Freeze",
+    "category": "freeze",
+    "price": 53000,
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.6,
+    "description": "Vải đá xay, vị ngọt, hương tươi mát."
+  },
+  {
+    "id": "FZ18",
+    "name": "Raspberry Freeze",
+    "category": "freeze",
+    "price": 55000,
+    "image": "https://images.unsplash.com/photo-1553530666-ba2a8e36cd77?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.7,
+    "description": "Mâm xôi đá xay, chua ngọt, thanh mát cực."
+  },
+  {
+    "id": "FZ19",
+    "name": "Coconut Freeze",
+    "category": "freeze",
+    "price": 54000,
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.5,
+    "description": "Dừa tươi đá xay, béo ngậy, thanh mát."
+  },
+  {
+    "id": "FZ20",
+    "name": "Ginger Lemon Freeze",
+    "category": "freeze",
+    "price": 52000,
+    "image": "https://images.unsplash.com/photo-1553530666-ba2a8e36cd77?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.4,
+    "description": "Gừng chanh đá xay, ấm dạ, tỉnh táo."
+  },
+  {
+    "id": "CK18",
+    "name": "Donuts",
+    "category": "cake",
+    "price": 32000,
+    "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.3,
+    "description": "Bánh donut, nhiều vị lựa chọn, vừa ăn ngon."
+  },
+  {
+    "id": "CK19",
+    "name": "Pudding",
+    "category": "cake",
+    "price": 38000,
+    "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.4,
+    "description": "Bánh pudding mềm, vị béo, ngon cực lối."
+  },
+  {
+    "id": "CK20",
+    "name": "Éclair",
+    "category": "cake",
+    "price": 42000,
+    "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=600&auto=format&fit=crop",
+    "rating": 4.6,
+    "description": "Bánh eclair, lớp vỏ bánh giòn, kem mềm."
   }
 ]

@@ -1,0 +1,37 @@
+@import url(../base.css);
+
+/* --- THEME TOGGLE BUTTON --- */
+.theme-btn {
+  font-size: 1.2rem;
+  padding: 8px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--foreground);
+}
+
+.theme-btn:hover {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+.icon-sun {
+  display: none;
+}
+.icon-moon {
+  display: block;
+}
+
+:root.dark .icon-sun {
+  display: block;
+  color: #f1c40f;
+}
+:root.dark .icon-moon {
+  display: none;
+}

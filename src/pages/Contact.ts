@@ -12,10 +12,11 @@ import AOS from "aos";
 
 const ContactPage: PageRender = {
   render: async () => {
+    const navbarHTML = await NavbarSection();
     return /*html*/ `
 
     <!-- Navbar -->
-    ${NavbarSection()}
+    ${navbarHTML}
 
     <main class="contact-page-wrapper">
       ${Container({

@@ -7,7 +7,11 @@ import type { Product } from "../types/interface";
 import { showProductModal } from "../layouts/productmodal";
 import { productRepo } from "../services/firebase/repository";
 
-// 1. Hàm render khung xương loading
+// ============================================
+// UTILITY FUNCTIONS - Các hàm helper
+// ============================================
+
+// Render khung xương (skeleton) để hiển thị khi đang tải dữ liệu
 const renderSkeleton = () => {
   return Array(8)
     .fill(0)
@@ -29,7 +33,7 @@ const renderSkeleton = () => {
     .join("");
 };
 
-// 2. Hàm render thẻ sản phẩm
+// Render thẻ sản phẩm (product card) - hiển thị một sản phẩm đơn lẻ với hình ảnh, tên, giá, và nút thêm vào giỏ
 const renderProductCard = (product: Product) => {
   const price = new Intl.NumberFormat("vi-VN", {
     style: "currency",
@@ -55,10 +59,15 @@ const renderProductCard = (product: Product) => {
   `;
 };
 
+// ============================================
+// MAIN PAGE COMPONENT
+// ============================================
 const ProductPage: PageRender = {
+  // Render: Vẽ giao diện HTML ban đầu (structure)
   render: async () => {
+    const navbarHTML = await NavbarSection();
     return /*html*/ `
-    ${NavbarSection()}
+    ${navbarHTML}
     
     <main class="product-page-wrapper">
       ${Container({
@@ -85,8 +94,7 @@ const ProductPage: PageRender = {
             <!-- MAIN CONTENT -->
             <div class="product-content">
               <div class="flex justify-between items-center mb-6">
-                 <h2 class="text-2xl font-bold" style="color: var(--primary);">Thực Đơn</h2>
-                 <span class="text-gray-500" id="product-count">Đang tải...</span>
+                 <h2 class="text-2xl font-bold" style="color: var(--primary);">Thực Đơn:  <span class="text-strong" id="product-count">đang tải...</span></h2>
               </div>
 
               <!-- Grid sản phẩm -->
@@ -106,7 +114,9 @@ const ProductPage: PageRender = {
     `;
   },
 
+  // AfterRender: Thêm logic và xử lý sự kiện sau khi HTML được render
   afterRender: async () => {
+    // -------- KHỞI TẠO VÀ KHAI BÁO BIẾN --------
     const productContainer = document.getElementById("product-list");
     const countLabel = document.getElementById("product-count");
     const searchInput = document.getElementById(
@@ -115,11 +125,15 @@ const ProductPage: PageRender = {
     const categoryBtns = document.querySelectorAll(".category-item");
     const paginationContainer = document.getElementById("pagination-container");
 
-    let fullProducts: Product[] = []; // Kho gốc
-    let filteredProducts: Product[] = []; // Kho đã lọc/search
-    let currentPage = 1;
+    let fullProducts: Product[] = []; // Lưu toàn bộ sản phẩm từ DB
+    let filteredProducts: Product[] = []; // Lưu sản phẩm sau khi lọc
+    let currentPage = 1; // Trang hiện tại
 
-    // 1. Lấy giới hạn sản phẩm theo màn hình
+    // ============================================
+    // HELPER FUNCTIONS - Các hàm hỗ trợ
+    // ============================================
+
+    // Lấy số lượng sản phẩm hiển thị trên 1 trang dựa vào kích thước màn hình (responsive)
     const getLimit = () => {
       const width = window.innerWidth;
       if (width >= 1024) return 12;
@@ -127,7 +141,7 @@ const ProductPage: PageRender = {
       return 6;
     };
 
-    // 2. Hàm vẽ nút phân trang
+    // Render nút phân trang (pagination) - hiển thị các nút để chuyển qua các trang sản phẩm khác nhau
     const renderPaginationButtons = (
       totalItems: number,
       activePage: number,
@@ -141,21 +155,90 @@ const ProductPage: PageRender = {
         return;
       }
 
+      const createBtn = (
+        page: number | string,
+        text: string,
+        isActive = false,
+        isDisabled = false,
+        isDots = false,
+      ) => {
+        if (isDots) return `<span class="page-btn dots">...</span>`;
+        return `<button class="page-btn ${isActive ? "active" : ""} ${isDisabled ? "disabled" : ""}" data-page="${page}">${text}</button>`;
+      };
+
       let html = "";
+
+      html += createBtn(
+        activePage - 1,
+        '<i class="ri-arrow-left-s-line"></i>',
+        false,
+        activePage === 1,
+      );
+
+      const delta = 1;
+      const range = [];
+      const rangeWithDots = [];
+      let l;
+
       for (let i = 1; i <= totalPages; i++) {
-        html += `<button class="page-btn ${i === activePage ? "active" : ""}" data-page="${i}">${i}</button>`;
+        if (
+          i === 1 ||
+          i === totalPages ||
+          (i >= activePage - delta && i <= activePage + delta)
+        ) {
+          range.push(i);
+        }
       }
+
+      for (let i of range) {
+        if (l) {
+          if (i - l === 2) {
+            rangeWithDots.push(l + 1);
+          } else if (i - l !== 1) {
+            rangeWithDots.push("...");
+          }
+        }
+        rangeWithDots.push(i);
+        l = i;
+      }
+
+      // Render các số trang
+      rangeWithDots.forEach((page) => {
+        if (page === "...") {
+          html += createBtn(0, "...", false, false, true);
+        } else {
+          html += createBtn(page, page.toString(), page === activePage);
+        }
+      });
+
+      // Nút Next (>)
+      html += createBtn(
+        activePage + 1,
+        '<i class="ri-arrow-right-s-line"></i>',
+        false,
+        activePage === totalPages,
+      );
+
       paginationContainer.innerHTML = html;
 
       paginationContainer.querySelectorAll(".page-btn").forEach((btn) => {
         btn.addEventListener("click", (e) => {
-          currentPage = Number((e.currentTarget as HTMLElement).dataset.page);
-          renderUI(); // Vẽ lại khi đổi trang
+          const btnEl = e.currentTarget as HTMLElement;
+          if (
+            btnEl.classList.contains("disabled") ||
+            btnEl.classList.contains("dots")
+          )
+            return;
+
+          const targetPage = Number(btnEl.dataset.page);
+          currentPage = targetPage;
+          renderUI();
         });
       });
     };
 
-    // 3. HÀM VẼ GIAO DIỆN TỔNG HỢP (Nhạc trưởng)
+    // Orchestrator: Cập nhật toàn bộ giao diện (phân trang + danh sách sản phẩm + số lượng)
+    // Đây là hàm "chỉ huy" được gọi mỗi khi cần refresh UI
     const renderUI = () => {
       if (!productContainer || !countLabel) return;
 
@@ -175,7 +258,7 @@ const ProductPage: PageRender = {
 
       // Vẽ sản phẩm
       productContainer.innerHTML = displayList.map(renderProductCard).join("");
-      countLabel.innerText = `${filteredProducts.length} món ngon`;
+      countLabel.innerText = `${filteredProducts.length} món`;
 
       // Vẽ phân trang
       renderPaginationButtons(filteredProducts.length, currentPage);
@@ -184,15 +267,19 @@ const ProductPage: PageRender = {
       window.scrollTo({ top: 0, behavior: "smooth" });
     };
 
+    // ============================================
+    // MAIN LOGIC - Khởi động ứng dụng
+    // ============================================
     try {
-      // BƯỚC 1: Fetch data một lần duy nhất
+      // BƯỚC 1: Tải dữ liệu sản phẩm từ Firebase một lần duy nhất lúc load trang
       fullProducts = await productRepo.getAll();
       filteredProducts = [...fullProducts];
 
       // BƯỚC 2: Chạy hàm vẽ lần đầu
       renderUI();
 
-      // BƯỚC 3: Logic Filter
+      // BƯỚC 3: Xử lý sự kiện Lọc theo danh mục (Category Filter)
+      // Khi user click vào một category, lọc sản phẩm cục bộ từ mảng fullProducts rồi cập nhật UI
       categoryBtns.forEach((btn) => {
         btn.addEventListener("click", async () => {
           document
@@ -214,7 +301,8 @@ const ProductPage: PageRender = {
         });
       });
 
-      // BƯỚC 4: Logic Search
+      // BƯỚC 4: Xử lý sự kiện Tìm kiếm (Search)
+      // Khi user gõ từ khóa, lọc sản phẩm theo tên và cập nhật danh sách
       searchInput?.addEventListener("input", (e) => {
         const keyword = (e.target as HTMLInputElement).value.toLowerCase();
         filteredProducts = fullProducts.filter((p) =>
@@ -224,7 +312,9 @@ const ProductPage: PageRender = {
         renderUI();
       });
 
-      // BƯỚC 5: Event Delegation cho Card & Quick Add
+      // BƯỚC 5: Xử lý sự kiện Click trên Thẻ sản phẩm (Event Delegation)
+      // Click nút "Thêm nhanh" sẽ thêm vào giỏ
+      // Click vào card sẽ mở modal chi tiết sản phẩm
       productContainer?.addEventListener("click", (e) => {
         const target = e.target as HTMLElement;
 
@@ -249,6 +339,7 @@ const ProductPage: PageRender = {
         }
       });
     } catch (error) {
+      // Xử lý lỗi khi tải dữ liệu từ Firebase
       console.error(error);
       if (productContainer)
         productContainer.innerHTML = "<p>Lỗi tải dữ liệu!</p>";

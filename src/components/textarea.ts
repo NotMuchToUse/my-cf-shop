@@ -19,9 +19,7 @@ const Textarea = ({
   rows = 3,
   ...props
 }: TextareaProps): string => {
-  return /*html*/ `
-        <textarea class="textarea ${className}" rows="${rows}" ${renderAttributes(props)}>${value}</textarea>
-    `;
+  return /*html*/ `<textarea class="textarea ${className}" rows="${rows}" ${renderAttributes(props)}>${value}</textarea>`;
 };
 
 export default Textarea;

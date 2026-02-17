@@ -55,13 +55,7 @@ export default function Field(props: NewFieldProps): string {
     return /*html*/ `
         <div class="field ${className}">
             <label class="field-label" for="${id}">${label}</label>
-            <textarea 
-                id="${id}"
-                class="field-textarea ${className}"
-                ${renderAttributes(textareaProps)}
-            >
-                ${value}
-            </textarea>
+            <textarea id="${id}" class="field-textarea ${className}" ${renderAttributes(textareaProps)}>${value}</textarea>
         </div>
     `;
   }

@@ -16,6 +16,7 @@
 @import url(./components/field.css);
 @import url(./components/textarea.css);
 @import url(./components/label.css);
+@import url(./components/theme-toggle.css);
 
 /* ====================== PAGES ========================== */
 @import url(./page/home.css);
